@@ -48,13 +48,7 @@ function setOptions(breeds) {
     .map(item => `<option value="${item.id}">${item.name}</option>`)
     .join();
   select.innerHTML = allCats;
-  hideLoader();
-  // let options = ['<option value=""></option>'];
-  // let markup = '';
-  // breeds.forEach(item => {
-  //   options.push(`<option value="${item.id}">${item.name}</option>`);
-  // });
-  // markup = options.join('');
+  showLoader();
 }
 
 // ===============================================================\\
@@ -80,7 +74,6 @@ function setCatInfo(response) {
   <p id="breed-name">${response.breeds[0].description}</p>
   <p id="breed-name">${response.breeds[0].temperament}</p>`;
   catInfo.innerHTML = catImgAndText;
-  hideLoader();
 }
 
 // ===============================================================\\
